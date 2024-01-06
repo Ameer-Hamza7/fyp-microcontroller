@@ -2,9 +2,9 @@ import RPi.GPIO as GPIO
 import time
 
 # Define board pin numbers
-IN1 = 11  # Input 1
-IN2 = 12  # Input 2
-ENA = 13  # Enable A (PWM)
+IN1 = 29  # Input 1
+IN2 = 37  # Input 2
+ENA = 31  # Enable A (PWM)
 
 # Set the GPIO mode and configure pins
 GPIO.setmode(GPIO.BOARD)
@@ -15,15 +15,15 @@ GPIO.setup(ENA, GPIO.OUT)
 # Create a PWM object
 pwm_motor = GPIO.PWM(ENA, 100)  # 100 Hz frequency
 
-def motor_forward():
+def motor_forward(speed):
     GPIO.output(IN1, GPIO.HIGH)
     GPIO.output(IN2, GPIO.LOW)
-    pwm_motor.start(50)  # 50% duty cycle (adjust as needed)
+    pwm_motor.start(speed)
 
-def motor_backward():
+def motor_backward(speed):
     GPIO.output(IN1, GPIO.LOW)
     GPIO.output(IN2, GPIO.HIGH)
-    pwm_motor.start(50)
+    pwm_motor.start(speed)
 
 def motor_stop():
     GPIO.output(IN1, GPIO.LOW)
@@ -33,11 +33,11 @@ def motor_stop():
 try:
     # Main loop
     while True:
-        motor_forward()
+        motor_forward(10)  # 50% speed
         print("Motor Forward")
         time.sleep(2)
 
-        motor_backward()
+        motor_backward(75)  # 75% speed
         print("Motor Backward")
         time.sleep(2)
 
