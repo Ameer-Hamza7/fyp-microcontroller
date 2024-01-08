@@ -48,6 +48,7 @@ if __name__ == "__main__":
             print(f"Distance: {distance3:.2f} cm")
             print(f"Distance: {distance4:.2f} cm")
             time.sleep(1)
-
+    except Exception as e:
+        print('Error During Process : ', e)
     except KeyboardInterrupt:
         cleanup()
