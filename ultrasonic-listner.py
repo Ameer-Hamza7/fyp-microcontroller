@@ -35,17 +35,17 @@ def cleanup():
 if __name__ == "__main__":
     try:
         setup_bin(TRIG_PIN=16, ECHO_PIN=40)
-        # setup_bin(TRIG_PIN=18, ECHO_PIN=36)
-        # setup_bin(TRIG_PIN=22, ECHO_PIN=38)
+        setup_bin(TRIG_PIN=18, ECHO_PIN=34)
+        setup_bin(TRIG_PIN=22, ECHO_PIN=36)
         # setup_bin(TRIG_PIN=24, ECHO_PIN=40)
         while True:
             distance1 = get_bin_level(TRIG_PIN=16, ECHO_PIN=40)
-            # distance2 = get_bin_level(TRIG_PIN=18, ECHO_PIN=36)
-            # distance3 = get_bin_level(TRIG_PIN=22, ECHO_PIN=38)
+            distance2 = get_bin_level(TRIG_PIN=18, ECHO_PIN=34)
+            distance3 = get_bin_level(TRIG_PIN=22, ECHO_PIN=36)
             # distance4 = get_bin_level(TRIG_PIN=24, ECHO_PIN=40)
             print(f"Distance: {distance1:.2f} cm")
-            # print(f"Distance: {distance2:.2f} cm")
-            # print(f"Distance: {distance3:.2f} cm")
+            print(f"Distance: {distance2:.2f} cm")
+            print(f"Distance: {distance3:.2f} cm")
             # print(f"Distance: {distance4:.2f} cm")
             time.sleep(1)
     except Exception as e:
