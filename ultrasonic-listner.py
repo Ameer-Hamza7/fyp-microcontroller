@@ -35,7 +35,7 @@ def cleanup():
 if __name__ == "__main__":
     try:
         # setup_bin(TRIG_PIN=16, ECHO_PIN=40)
-        setup_bin(TRIG_PIN=18, ECHO_PIN=34)
+        setup_bin(TRIG_PIN=18, ECHO_PIN=32)
         setup_bin(TRIG_PIN=22, ECHO_PIN=36)
         # setup_bin(TRIG_PIN=24, ECHO_PIN=40)
         while True:
