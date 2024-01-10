@@ -18,25 +18,27 @@ def see(pin_no):
     
     return value
 
-eye_setup(pin_no=eye_pin_1)
-eye_setup(pin_no=eye_pin_2)
+if __name__ == "__main__":
 
-try:
-    while True:
-        # Read data from sensor 1
-        eye_1_value = see(pin_no=eye_pin_1)
-        eye_2_value = see(pin_no=eye_pin_2)
+    eye_setup(pin_no=eye_pin_1)
+    eye_setup(pin_no=eye_pin_2)
 
-        # Print the sensor values
-        print(f"Sensor 1: {eye_1_value}, Sensor 2: {eye_2_value}")
+    try:
+        while True:
+            # Read data from sensor 1
+            eye_1_value = see(pin_no=eye_pin_1)
+            eye_2_value = see(pin_no=eye_pin_2)
 
-        # Wait for a short duration before reading again
-        time.sleep(1)
+            # Print the sensor values
+            print(f"Sensor 1: {eye_1_value}, Sensor 2: {eye_2_value}")
 
-except KeyboardInterrupt:
-    # Clean up GPIO on keyboard interrupt
-    GPIO.cleanup()
+            # Wait for a short duration before reading again
+            time.sleep(1)
 
-finally:
-    # Clean up GPIO on program exit
-    GPIO.cleanup()
+    except KeyboardInterrupt:
+        # Clean up GPIO on keyboard interrupt
+        GPIO.cleanup()
+
+    finally:
+        # Clean up GPIO on program exit
+        GPIO.cleanup()

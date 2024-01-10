@@ -30,22 +30,23 @@ def motor_stop():
     GPIO.output(IN2, GPIO.LOW)
     pwm_motor.stop()
 
-try:
-    # Main loop
-    while True:
-        motor_forward(10)  # 50% speed
-        print("Motor Forward")
-        time.sleep(2)
+if __name__ == "__main__":
+    try:
+        # Main loop
+        while True:
+            motor_forward(10)  # 50% speed
+            print("Motor Forward")
+            time.sleep(2)
 
-        motor_backward(75)  # 75% speed
-        print("Motor Backward")
-        time.sleep(2)
+            motor_backward(75)  # 75% speed
+            print("Motor Backward")
+            time.sleep(2)
 
-except KeyboardInterrupt:
-    pass
+    except KeyboardInterrupt:
+        pass
 
-finally:
-    # Cleanup
-    motor_stop()
-    GPIO.cleanup()
-    print("Script terminated, GPIO cleanup complete.")
+    finally:
+        # Cleanup
+        motor_stop()
+        GPIO.cleanup()
+        print("Script terminated, GPIO cleanup complete.")

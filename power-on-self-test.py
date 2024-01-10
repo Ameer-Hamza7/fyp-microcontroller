@@ -2,6 +2,8 @@ from .ultrasonic_listener import setup_bin, get_bin_level
 from .ir_listener import eye_setup, see
 import RPi.GPIO as GPIO
 
+def cleanup():
+    GPIO.cleanup()
 
 if __name__ == "__main__":
     setup_bin(TRIG_PIN=16, ECHO_PIN=40)
@@ -25,3 +27,5 @@ if __name__ == "__main__":
         print("eye 01 status - OK \n eye 02 status - OK")
     
     print("Everything Works fine")
+    
+    cleanup()
