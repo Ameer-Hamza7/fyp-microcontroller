@@ -1,5 +1,5 @@
-from .ultrasonic_listener import setup_bin, get_bin_level
-from .ir_listener import eye_setup, see
+from ultrasonic_listener import setup_bin, get_bin_level
+from ir_listener import eye_setup, see
 import RPi.GPIO as GPIO
 
 def cleanup():
