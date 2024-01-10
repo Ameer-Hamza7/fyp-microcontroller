@@ -15,17 +15,18 @@ if __name__ == "__main__":
     bin3_chk = get_bin_level(TRIG_PIN=22, ECHO_PIN=36)
     
     if bin1_chk is not None and bin2_chk is not None and bin3_chk is not None:
-        print("bin 01 status - OK \n bin 02 status - OK \n bin 03 status - OK ")
+        print("bin 01 status - OK \nbin 02 status - OK \nbin 03 status - OK ")
         
     eye_setup(pin_no=13)
     eye_setup(pin_no=15)
 
-    val1 = see(pin_no=13) 
+    val1 = see(pin_no=13)
     val2 = see(pin_no=15) 
 
-    if val1 is not None and val2:
-        print("eye 01 status - OK \n eye 02 status - OK")
+    if val1 is not None and val2 is not None:
+        print("eye 01 status - OK \neye 02 status - OK")
+    
+    cleanup()
     
     print("Everything Works fine")
     
-    cleanup()
