@@ -37,17 +37,18 @@ if __name__ == "__main__":
         setup_bin(TRIG_PIN=16, ECHO_PIN=40)
         setup_bin(TRIG_PIN=18, ECHO_PIN=32)
         setup_bin(TRIG_PIN=22, ECHO_PIN=36)
-        # setup_bin(TRIG_PIN=24, ECHO_PIN=40)
+        setup_bin(TRIG_PIN=24, ECHO_PIN=38)
         while True:
             distance1 = get_bin_level(TRIG_PIN=16, ECHO_PIN=40)
             distance2 = get_bin_level(TRIG_PIN=18, ECHO_PIN=32)
             distance3 = get_bin_level(TRIG_PIN=22, ECHO_PIN=36)
-            # distance4 = get_bin_level(TRIG_PIN=24, ECHO_PIN=40)
+            distance4 = get_bin_level(TRIG_PIN=24, ECHO_PIN=38)
             print(f"Distance: {distance1:.2f} cm")
             print(f"Distance: {distance2:.2f} cm")
             print(f"Distance: {distance3:.2f} cm")
-            # print(f"Distance: {distance4:.2f} cm")
-            time.sleep(1)
+            print(f"Distance: {distance4:.2f} cm")
+            print('=============================')
+            time.sleep(5)
     except Exception as e:
         print('Error During Process : ', e)
     except KeyboardInterrupt:
