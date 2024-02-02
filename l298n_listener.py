@@ -2,9 +2,9 @@ import RPi.GPIO as GPIO
 import time
 
 # Define board pin numbers
-IN1 = 29  # Input 1
+IN1 = 31  # Input 1
 IN2 = 37  # Input 2
-ENA = 31  # Enable A (PWM)
+ENA = 33  # Enable A (PWM)
 
 # Set the GPIO mode and configure pins
 GPIO.setmode(GPIO.BOARD)
