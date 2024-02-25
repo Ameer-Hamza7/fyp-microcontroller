@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO          
 from time import sleep
 
+
 in1 = 31
 in2 = 37
 en = 33
@@ -77,6 +78,9 @@ while(1):
         GPIO.cleanup()
         break
     
+    
     else:
         print("<<<  wrong data  >>>")
         print("please enter the defined data to continue.....")
+    
+    sleep(10)
