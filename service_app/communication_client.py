@@ -60,6 +60,11 @@ def sensor_task():
         with open('mode.txt', 'w') as f:
             f.write("halt")
         print('Terminated............')
+        ws = create_connection("ws://158.220.114.235:2023/ws/devices/1/")
+        ws.send(json.dumps({"message" : {"mode" : "halt"}}))
+        print('sending scan message .............')
+                
+        time.sleep(5)
 
     finally:
         pass
