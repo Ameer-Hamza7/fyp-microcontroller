@@ -1,0 +1,101 @@
+{
+    "combinations": [
+      {
+        "start": "A",
+        "end": "A",
+        "time": 0,
+        "moving": "forward"
+      },
+      {
+        "start": "A",
+        "end": "B",
+        "time": 15,
+        "moving": "forward"
+      },
+      {
+        "start": "A",
+        "end": "C",
+        "time": 30,
+        "moving": "forward"
+      },
+      {
+        "start": "A",
+        "end": "D",
+        "time": 45,
+        "moving": "forward"
+      },
+      {
+        "start": "B",
+        "end": "A",
+        "time": 15,
+        "moving": "backward"
+      },
+      {
+        "start": "B",
+        "end": "B",
+        "time": 0,
+        "moving": "forward"
+      },
+      {
+        "start": "B",
+        "end": "C",
+        "time": 15,
+        "moving": "forward"
+      },
+      {
+        "start": "B",
+        "end": "D",
+        "time": 30,
+        "moving": "forward"
+      },
+      {
+        "start": "C",
+        "end": "A",
+        "time": 30,
+        "moving": "backward"
+      },
+      {
+        "start": "C",
+        "end": "B",
+        "time": 15,
+        "moving": "backward"
+      },
+      {
+        "start": "C",
+        "end": "C",
+        "time": 0,
+        "moving": "forward"
+      },
+      {
+        "start": "C",
+        "end": "D",
+        "time": 15,
+        "moving": "forward"
+      },
+      {
+        "start": "D",
+        "end": "A",
+        "time": 45,
+        "moving": "backward"
+      },
+      {
+        "start": "D",
+        "end": "B",
+        "time": 30,
+        "moving": "backward"
+      },
+      {
+        "start": "D",
+        "end": "C",
+        "time": 15,
+        "moving": "backward"
+      },
+      {
+        "start": "D",
+        "end": "D",
+        "time": 0,
+        "moving": "forward"
+      }
+    ]
+  }
+  
