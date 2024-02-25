@@ -38,7 +38,7 @@ def sensor_task():
             with open('mode.txt', 'r') as f:
                 MACHINE_MODE = f.read()
                 
-            print(f"Sensor 1: {eye_1_value}, Sensor 2: {eye_2_value}")
+            print(f"Sensor 1: {eye_1_value}, Sensor 2: {eye_2_value}, Machine Mode: {MACHINE_MODE}")
                 
             if (eye_1_value == 0 or eye_2_value == 0) and (MACHINE_MODE == 'halt' or MACHINE_MODE == 'release'):
                 ws = create_connection("ws://158.220.114.235:2023/ws/devices/1/")
