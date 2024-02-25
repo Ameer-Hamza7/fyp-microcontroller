@@ -1,10 +1,5 @@
-import websocket
-import rel
-# import RPi.GPIO as GPIO
 import time
 import json
-import random
-import asyncio
 from websocket import create_connection
 import RPi.GPIO as GPIO
 import time

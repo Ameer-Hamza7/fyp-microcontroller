@@ -1,6 +1,4 @@
 import websocket
-import _thread
-import time
 import rel
 import json
 
