@@ -47,12 +47,12 @@ def sensor_task():
                 
             if (eye_1_value == 0 or eye_2_value == 0) and (MACHINE_MODE == 'halt' or MACHINE_MODE == 'release'):
                 ws = create_connection("ws://158.220.114.235:2023/ws/devices/1/")
-                ws.send(json.dumps({"message" : {"mode" : "begin"}}))
-                print('sending begin message .............')
+                ws.send(json.dumps({"message" : {"mode" : "scan"}}))
+                print('sending scan message .............')
                 
                 time.sleep(5)
 
-                MACHINE_MODE = 'begin'
+                MACHINE_MODE = 'scan'
             
             else:
                 print('------  blaa !!!')
