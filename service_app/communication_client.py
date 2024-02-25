@@ -57,7 +57,9 @@ def sensor_task():
             print(f"Sensor 1: {eye_1_value}, Sensor 2: {eye_2_value}")
 
     except KeyboardInterrupt:
-        pass
+        with open('mode.txt', 'w') as f:
+            f.write("halt")
+        print('Terminated............')
 
     finally:
         pass
