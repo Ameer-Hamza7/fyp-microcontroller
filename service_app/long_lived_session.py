@@ -6,9 +6,16 @@ def on_message(ws, message):
     try:
         message = json.loads(message)
         print(message)
-        with open('mode.txt', 'w') as f:
-            f.write(message['message']['mode'])
+        try:
+            state = message['message']['mode']
+            with open('mode.txt', 'w') as f:
+                f.write(state)
+        except Exception as e:
+            state = message['message']['mode']
+            with open('destination.txt', 'w') as f:
+                f.write(state)
             
+        
     except Exception as e:
         print('message ====> ', e)
     print(message)
