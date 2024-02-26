@@ -21,12 +21,16 @@ pwm_motor = GPIO.PWM(ENA, 100)  # 100 Hz frequency
 def motor_forward(speed):
     GPIO.output(IN1, GPIO.LOW)
     GPIO.output(IN2, GPIO.HIGH)
-    # pwm_motor.start(speed)
+    pwm_motor.start(speed)
 
 def motor_stop():
     GPIO.output(IN1, GPIO.LOW)
     GPIO.output(IN2, GPIO.LOW)
     pwm_motor.stop()
+    
+def update_file(FILE_FLAG):
+    with open('destination.txt', 'w') as f:
+        f.write(FILE_FLAG)
         
 if __name__ == "__main__":
     print('Program Execution Starts ........')
@@ -38,18 +42,34 @@ if __name__ == "__main__":
                 if BIN_POSITION == 'NOTHING':
                     time.sleep(2)
                     continue
+                
                 elif BIN_POSITION == 'Wet Waste':
                     time.sleep(2)
+                    motor_stop()
+                    time.sleep(5)
+                    update_file('NOTHING')
+                    
                 elif BIN_POSITION == 'Dry Waste':
                     motor_forward(100) 
                     time.sleep(6.5)
+                    motor_stop()
+                    time.sleep(5)
+                    update_file('NOTHING')
+                    
                 elif BIN_POSITION == 'Medical Waste':
                     motor_forward(100) 
                     time.sleep(13)
+                    motor_stop()
+                    time.sleep(5)
+                    update_file('NOTHING')
+
                 elif BIN_POSITION == 'E Waste':
                     motor_forward(100) 
                     time.sleep(19.5)
-                    
+                    motor_stop()
+                    time.sleep(5)
+                    update_file('NOTHING')
+
                 print(BIN_POSITION)
                 
     except KeyboardInterrupt:
