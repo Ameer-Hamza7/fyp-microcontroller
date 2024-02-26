@@ -29,6 +29,7 @@ def motor_stop():
     pwm_motor.stop()
         
 if __name__ == "__main__":
+    print('Program Execution Starts ........')
     try:
         # Main loop
         while True:
@@ -48,6 +49,8 @@ if __name__ == "__main__":
                 elif BIN_POSITION == 'E Waste':
                     motor_forward(100) 
                     time.sleep(19.5)
+                    
+                print(BIN_POSITION)
                 
     except KeyboardInterrupt:
         pass
