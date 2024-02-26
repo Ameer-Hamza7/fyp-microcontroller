@@ -10,8 +10,10 @@ def on_message(ws, message):
             state = message['message']['mode']
             with open('mode.txt', 'w') as f:
                 f.write(state)
+            print('STATE',  state)
         except Exception as e:
-            state = message['message']['mode']
+            state = message['message']['destination']
+            print(e)
             with open('destination.txt', 'w') as f:
                 f.write(state)
             
