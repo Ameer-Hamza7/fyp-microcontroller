@@ -51,21 +51,21 @@ if __name__ == "__main__":
                     
                 elif BIN_POSITION == 'Dry Waste':
                     motor_forward(100) 
-                    time.sleep(6.5)
+                    time.sleep(9)
                     motor_stop()
                     time.sleep(5)
                     update_file('NOTHING')
                     
                 elif BIN_POSITION == 'Medical Waste':
                     motor_forward(100) 
-                    time.sleep(13)
+                    time.sleep(18)
                     motor_stop()
                     time.sleep(5)
                     update_file('NOTHING')
 
                 elif BIN_POSITION == 'E Waste':
                     motor_forward(100) 
-                    time.sleep(19.5)
+                    time.sleep(26)
                     motor_stop()
                     time.sleep(5)
                     update_file('NOTHING')
